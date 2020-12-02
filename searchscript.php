@@ -2,7 +2,7 @@
 
 ob_start(); // ensures anything dumped out will be caught
 
-$searchTerm = filter_var($_GET['term'], FILTER_SANITIZE_STRING);
+$searchTerm = $_GET['term']; //sanatize filter on this variable breaks quoted searching functionality in Primo
 
 $type = filter_var($_GET['type'], FILTER_SANITIZE_STRING);
 
